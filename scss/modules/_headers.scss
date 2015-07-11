@@ -1,0 +1,179 @@
+//	=============================================================================
+//	Header Modules + vertical padding / spacing
+//	=============================================================================
+
+
+
+// vertical spacing for home page header background
+.header {
+	padding: 7rem 0 8rem;
+
+	// to adjust top and bottom padding of main header area
+	@include mq(medium) {
+		padding: 10rem 0 12rem;
+	}
+	@include mq(large) {
+		padding: 12rem 0 14.5rem;
+	}
+}
+
+
+// vertical spacing for project header background
+.header--project {
+  padding: 5rem 0 4.5rem;
+  @include mq(medium) {
+    padding: 7rem 0 6.5rem;
+  }
+}
+
+.header--slideIn {
+  opacity: 0;
+  -webkit-animation: slideIn-quick .5s .3s forwards; /* Safari 4+ */
+  -moz-animation:    slideIn-quick .5s .3s forwards; /* Fx 5+ */
+  -o-animation:      slideIn-quick .5s .3s forwards; /* Opera 12+ */
+  animation:         slideIn-quick .5s .3s forwards; /* IE 10+, Fx 29+ */
+
+}
+
+
+
+
+// background image for large hearder
+.header-image {
+	opacity: 0;
+	background: $cyan;
+	background: url('../img/blue-background-1x.jpg') no-repeat $cyan;
+	background-size: cover;
+
+	// to switch background images 2x
+	@media screen and (min-width: 700px) {
+		background: url('../img/blue-background.jpg') repeat-y;
+		background-size: cover;
+	}
+}
+
+// background for background color during page load..
+.header-color {
+	background: $cyan;
+}
+
+
+
+
+///// Keyframes for SlideIn Animation ///////
+
+@-webkit-keyframes slideIn {
+  0%   { opacity: 0;
+  		 transform: translateY(-100px); }
+  50% { opacity: .6;
+    	 transform: translateY(2px); }
+  80% { opacity: .8;
+    	 transform: translateY(-3px); }
+  100% { opacity: 1;
+    	 transform: translateY(0%); }
+}
+
+@keyframes slideIn {
+  0%   { opacity: 0;
+  		 transform: translateY(-100px); }
+  50% { opacity: .6;
+    	 transform: translateY(2px); }
+  80% { opacity: .8;
+    	 transform: translateY(-3px); }
+  100% { opacity: 1;
+    	 transform: translateY(0%); }
+}
+
+@-moz-keyframes slideIn {
+  0%   { opacity: 0;
+  		 transform: translateY(-100px); }
+  50% { opacity: .6;
+    	 transform: translateY(2px); }
+  80% { opacity: .8;
+    	 transform: translateY(-3px); }
+  100% { opacity: 1;
+    	 transform: translateY(0%); }
+}
+
+@-o-keyframes slideIn {
+  0%   { opacity: 0;
+  		 transform: translateY(-100px); }
+  50% { opacity: .6;
+    	 transform: translateY(2px); }
+  80% { opacity: .8;
+    	 transform: translateY(-3px); }
+  100% { opacity: 1;
+    	 transform: translateY(0%); }
+}
+
+
+
+///// Quick Slide In : for project headers ////////
+
+@-webkit-keyframes slideIn-quick {
+  0%   { opacity: 0;
+       transform: translateY(-30px); }
+  50% { opacity: .6;
+       transform: translateY(2px); }
+  80% { opacity: .8;
+       transform: translateY(-3px); }
+  100% { opacity: 1;
+       transform: translateY(0%); }
+}
+
+@keyframes slideIn-quick {
+  0%   { opacity: 0;
+       transform: translateY(-30px); }
+  50% { opacity: .6;
+       transform: translateY(2px); }
+  80% { opacity: .8;
+       transform: translateY(-3px); }
+  100% { opacity: 1;
+       transform: translateY(0%); }
+}
+
+@-moz-keyframes slideIn-quick {
+  0%   { opacity: 0;
+       transform: translateY(-30px); }
+  50% { opacity: .6;
+       transform: translateY(2px); }
+  80% { opacity: .8;
+       transform: translateY(-3px); }
+  100% { opacity: 1;
+       transform: translateY(0%); }
+}
+
+@-o-keyframes slideIn-quick {
+  0%   { opacity: 0;
+       transform: translateY(-30px); }
+  50% { opacity: .6;
+       transform: translateY(2px); }
+  80% { opacity: .8;
+       transform: translateY(-3px); }
+  100% { opacity: 1;
+       transform: translateY(0%); }
+}
+
+
+
+
+
+
+// Logo, Name, Title Area
+.header__logo {
+	background: url('../img/logo.svg') no-repeat top center;
+	background-size: 130px;
+	padding: 13rem 0 0 0;
+	opacity: 0;
+  -webkit-animation: slideIn .6s .4s forwards; /* Safari 4+ */
+  -moz-animation:    slideIn .6s .4s forwards; /* Fx 5+ */
+  -o-animation:      slideIn .6s .4s forwards; /* Opera 12+ */
+  animation:         slideIn .6s .4s forwards; /* IE 10+, Fx 29+ */
+
+	// increase logo size for larger views
+
+	@include mq(medium) {
+		background-size: 150px;
+		padding: 15rem 0 0 0;
+	}
+}

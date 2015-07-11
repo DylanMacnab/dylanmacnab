@@ -1,0 +1,130 @@
+
+//	=============================================================================
+//	Helper Classes: non modular classes
+//	=============================================================================
+
+
+
+
+
+
+//	=============================================================================
+//	Small Screen Helpers
+//	=============================================================================
+
+
+// Small Screen Style Helpers
+
+.hidden--small {
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+}
+
+
+
+
+
+//	=============================================================================
+//	Layout Helers
+//	=============================================================================
+
+
+// floating left only for larger screens
+.left {
+	float: left;
+}
+// added margin top to adjust spacing in nav bar... don't reuse this class...
+.right {
+	float: right;
+	margin-top: .59rem;
+	@include mq(medium) {
+		margin-top: .88rem;
+	}
+}
+
+
+
+
+
+//	=============================================================================
+//	Typography Helpers
+//	=============================================================================
+
+
+// for large text, introductions, footer, etc.
+.p-large {
+	font-size: 1.1rem;
+	font-weight: 100;
+	max-width: 825px;
+	line-height: 1.7;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.p-large--invert {
+	@extend .p-large;
+	color: $grey-4;
+}
+
+
+
+// for underlined headlines
+h1:after, h2:after {
+	display: block;
+	content: '';
+	margin: 0 auto;
+	width: 60px;
+	height: 4px;
+	background: $grey-4;
+
+}
+
+h1:after {
+	// for top spacing
+	margin-top: 1.1rem;
+}
+
+h2:after {
+	// for top spacing
+	margin-top: 0.5rem;
+}
+
+
+
+// white h3 only needed for header
+header h3 {
+	color: white;
+}
+
+
+
+
+//	=============================================================================
+//	Interactive Helpers
+//	=============================================================================
+
+// class hook for footer icons
+.svg-hover {
+	transition: .3s;
+}
+
+svg:hover {
+
+	.svg-hover {
+		fill: $cyan;
+	}
+}
+
+
+// fixed navbar
+
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+

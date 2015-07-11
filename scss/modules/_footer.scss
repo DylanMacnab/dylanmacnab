@@ -1,0 +1,29 @@
+//	=============================================================================
+//	Footer Module
+//	=============================================================================
+
+
+.footer {
+	background: $grey-2;
+	padding: 7.5rem 0;
+	background: url('../img/grey-background-1x.jpg') no-repeat;
+	background-size: cover;
+	@include mq(medium) {
+		background: url('../img/grey-background-2x.jpg') no-repeat;
+		padding: 10rem 0 12rem 0;
+	}
+}
+
+
+.footer__bar {
+
+	padding: 1.5rem 0 1.2rem 0;
+	a {
+		margin: 0 .5rem;
+		text-decoration: none;
+		border-bottom: none;
+		@include mq(medium) {
+			margin: 0 1rem;
+		}
+	}
+}

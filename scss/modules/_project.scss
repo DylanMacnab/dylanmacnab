@@ -1,0 +1,101 @@
+//	=============================================================================
+//	Project Module
+//	=============================================================================
+
+
+.project {
+	
+	// width 100% of parten on small screens
+	padding: 5.5rem 0 0 0;
+	position: relative;
+
+	a {
+		border-bottom: none;
+	}
+
+	&:last-of-type {
+		padding-bottom: 2rem;
+	}
+
+	@include mq(medium) {
+		width: 45%; 
+		margin: 0 2.5%;
+		float: left;
+		padding-top: 7rem;
+	}
+	@include mq(large) {
+		width: 29%;
+		margin: 0 2.166666%;
+		padding-top: 4rem;
+	}
+}
+
+
+
+.project__title {
+	position: absolute;
+	top: 40%;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	margin-bottom: 0;
+	@media screen and (max-width: 1200px) {
+		position: static;
+		opacity: 1;
+	}
+}
+
+
+// hover effect transition for title and image
+
+
+.project__title, .project img, a {
+	transition: .3s ease-in-out;
+}
+
+
+.project a:hover {
+
+    -webkit-backface-visibility: hidden;
+
+
+	img {
+		opacity: .45;
+	}
+
+	.project__title {
+		opacity: 1;
+		top: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

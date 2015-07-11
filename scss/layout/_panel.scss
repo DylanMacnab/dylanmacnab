@@ -1,0 +1,44 @@
+//	=============================================================================
+//	Panels: for page layout and sections
+//	=============================================================================
+
+
+/////////////// Notes to self:///////////////
+
+// how will these adapt to media queries?
+// use these to add padding to major sections
+// avoid making too many of these if possible
+
+/////////////////////////////////////////////
+
+
+
+// vertical padding for main page content
+
+.panel {
+	padding: 5rem 0 6.5rem;
+
+	@include mq(medium) {
+		padding: 7rem 0 10rem;
+	}
+}
+
+
+
+
+
+///// For Project Pages Only //////
+
+.panel--project {
+	padding: 5rem 0 3rem;
+	margin-bottom: 3rem;
+	border-bottom: 2px solid $grey-2;
+
+	@include mq(medium) {
+		padding: 5rem 0 6.5rem;
+	}
+}
+
+.panel--project--last {
+	border-bottom: none;
+}

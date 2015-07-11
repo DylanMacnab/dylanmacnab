@@ -1,0 +1,82 @@
+//	=============================================================================
+//	Skill Module
+//	=============================================================================
+
+
+
+
+.skill {
+	padding-top: 13rem;
+	@include mq(medium) {
+		padding-top: 15rem;
+		width: 45%; 
+		margin: 0 2.5%;
+		float: left;
+	}
+	@include mq(large) {
+		width: 28%;
+		margin: 0 2.6666666%;
+	}
+}
+
+
+
+
+.skill--concept {
+	background: url('../img/icon-concept.svg') no-repeat;
+}
+
+
+.skill--prototyping {
+	background: url('../img/icon-prototyping.svg') no-repeat;
+}
+
+
+.skill--design {
+	background: url('../img/icon-design.svg') no-repeat;
+	@include mq(medium) {
+		clear: left;
+	}
+	@include mq(large) {
+		clear: none;
+	}
+}
+
+
+.skill--coding {
+	background: url('../img/icon-coding.svg') no-repeat;
+	@include mq(large) {
+	clear: left;
+	}
+}
+
+
+.skill--ux {
+	background: url('../img/icon-ux.svg') no-repeat;
+	@include mq(medium) {
+		clear: left;
+	}
+	@include mq(large) {
+		clear: none;
+	}
+}
+
+.skill--learning {
+	background: url('../img/icon-learning.svg') no-repeat;
+}
+
+
+
+
+// Changing background size and position of skill icons
+[class^="skill"] {
+	background-size: 100px;
+	background-position: center 5rem;
+	@include mq(medium) {
+		background-position: center 7rem;
+	}
+}
+
+
+
+
