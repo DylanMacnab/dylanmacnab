@@ -66,6 +66,9 @@
 	.project__title {
 		opacity: 1;
 		top: 50%;
+		&last-of-type {
+			top: 40%;
+		}
 	}
 }
 
