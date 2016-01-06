@@ -421,6 +421,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/keen-thumb.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 498810,
+		"inputAbbreviatedPath": "\/img\/keen-thumb.png",
+		"outputAbbreviatedPath": "\/img\/keen-thumb.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo1-lg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
