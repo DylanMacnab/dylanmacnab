@@ -408,11 +408,11 @@ h2 {
       font-size: 3.125rem; } }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 1rem 0 1rem 0; }
   @media (min-width: 800px) {
     h3 {
-      font-size: 1.375rem; } }
+      font-size: 1.2rem; } }
 
 h4 {
   font-size: .9375rem;
@@ -423,7 +423,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid;
   -webkit-transition: 0.25s;
-          transition: 0.25s; }
+  transition: 0.25s; }
   @media (min-width: 800px) {
     a:hover {
       color: #00a5bb; } }
@@ -448,7 +448,7 @@ b {
 
 svg:hover, svg {
   -webkit-transition: 3s;
-          transition: 3s; }
+  transition: 3s; }
 
 .panel {
   padding: 5rem 0 6.5rem; }
@@ -483,7 +483,7 @@ svg:hover, svg {
 .container--intro {
   margin: 0 auto;
   width: 85%;
-  max-width: 590px; }
+  max-width: 480px; }
   @media screen and (max-width: 350px) {
     .container--intro {
       width: 90%; } }
@@ -552,7 +552,7 @@ header h3 {
 
 .svg-hover {
   -webkit-transition: .3s;
-          transition: .3s; }
+  transition: .3s; }
 
 svg:hover .svg-hover {
   fill: #00BCD4; }
@@ -616,6 +616,7 @@ svg:hover .svg-hover {
     opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -633,6 +634,7 @@ svg:hover .svg-hover {
     opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
+
 @-webkit-keyframes slideIn-quick {
   0% {
     opacity: 0;
@@ -650,6 +652,7 @@ svg:hover .svg-hover {
     opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
+
 @keyframes slideIn-quick {
   0% {
     opacity: 0;
@@ -667,6 +670,7 @@ svg:hover .svg-hover {
     opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
+
 .header__logo {
   background: url("../img/logo.svg") no-repeat top center;
   background-size: 130px;
@@ -705,7 +709,7 @@ svg:hover .svg-hover {
   letter-spacing: .05rem;
   line-height: 0rem;
   -webkit-transition: .2s;
-          transition: .2s; }
+  transition: .2s; }
   @media screen and (max-width: 350px) {
     .nav__link {
       letter-spacing: .02rem;
@@ -805,7 +809,7 @@ svg:hover .svg-hover {
 
 .project__title, .project img, a {
   -webkit-transition: .3s ease-in-out;
-          transition: .3s ease-in-out; }
+  transition: .3s ease-in-out; }
 
 .project a:hover {
   -webkit-backface-visibility: hidden; }
@@ -828,6 +832,7 @@ svg:hover .svg-hover {
       padding: 10rem 0 12rem 0; } }
 
 .footer__bar {
+  border-top: 2px solid #EAEAE8;
   padding: 1.5rem 0 1.2rem 0; }
   .footer__bar a {
     margin: 0 .5rem;

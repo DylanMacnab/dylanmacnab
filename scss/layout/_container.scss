@@ -31,7 +31,7 @@
 .container--intro {
 	margin: 0 auto;
 	width: 85%;
-	max-width: 590px;
+	max-width: 480px;
 	@extend %clearfix;
 	@media screen and (max-width: 350px) {
 		width: 90%;
