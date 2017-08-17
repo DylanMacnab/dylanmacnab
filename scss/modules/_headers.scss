@@ -165,11 +165,12 @@
 	background-size: 130px;
 	padding: 13rem 0 0 0;
 	opacity: 0;
-  -webkit-animation: slideIn .6s .4s forwards; /* Safari 4+ */
-  -moz-animation:    slideIn .6s .4s forwards; /* Fx 5+ */
-  -o-animation:      slideIn .6s .4s forwards; /* Opera 12+ */
-  animation:         slideIn .6s .4s forwards; /* IE 10+, Fx 29+ */
-
+	&.animate {
+	  -webkit-animation: slideIn .6s .4s forwards; /* Safari 4+ */
+	  -moz-animation:    slideIn .6s .4s forwards; /* Fx 5+ */
+	  -o-animation:      slideIn .6s .4s forwards; /* Opera 12+ */
+	  animation:         slideIn .6s .4s forwards; /* IE 10+, Fx 29+ */
+	}
 	// increase logo size for larger views
 
 	@include mq(medium) {
