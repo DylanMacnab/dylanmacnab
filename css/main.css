@@ -169,6 +169,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -297,6 +298,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -366,10 +369,6 @@ body {
   line-height: 1.65;
   text-align: center; }
 
-::-moz-selection {
-  background: #00BCD4;
-  color: #fff; }
-
 ::selection {
   background: #00BCD4;
   color: #fff; }
@@ -422,7 +421,6 @@ a {
   color: #00BCD4;
   text-decoration: none;
   border-bottom: 1px solid;
-  -webkit-transition: 0.25s;
   transition: 0.25s; }
   @media (min-width: 800px) {
     a:hover {
@@ -447,7 +445,6 @@ b {
   font-weight: bold; }
 
 svg:hover, svg {
-  -webkit-transition: 3s;
   transition: 3s; }
 
 .panel {
@@ -551,7 +548,6 @@ header h3 {
   color: white; }
 
 .svg-hover {
-  -webkit-transition: .3s;
   transition: .3s; }
 
 svg:hover .svg-hover {
@@ -581,7 +577,9 @@ svg:hover .svg-hover {
   opacity: 0;
   -webkit-animation: slideIn-quick .5s .3s forwards;
   /* Safari 4+ */
+  -moz-animation: slideIn-quick .5s .3s forwards;
   /* Fx 5+ */
+  -o-animation: slideIn-quick .5s .3s forwards;
   /* Opera 12+ */
   animation: slideIn-quick .5s .3s forwards;
   /* IE 10+, Fx 29+ */ }
@@ -602,86 +600,129 @@ svg:hover .svg-hover {
 @-webkit-keyframes slideIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px); }
+    transform: translateY(-100px); }
   50% {
     opacity: .6;
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px); }
+    transform: translateY(2px); }
   80% {
     opacity: .8;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px); }
+    transform: translateY(-3px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+    transform: translateY(0%); } }
 
 @keyframes slideIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px); }
+    transform: translateY(-100px); }
   50% {
     opacity: .6;
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px); }
+    transform: translateY(2px); }
   80% {
     opacity: .8;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px); }
+    transform: translateY(-3px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+    transform: translateY(0%); } }
+
+@-moz-keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  50% {
+    opacity: .6;
+    transform: translateY(2px); }
+  80% {
+    opacity: .8;
+    transform: translateY(-3px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-o-keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  50% {
+    opacity: .6;
+    transform: translateY(2px); }
+  80% {
+    opacity: .8;
+    transform: translateY(-3px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 
 @-webkit-keyframes slideIn-quick {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px); }
+    transform: translateY(-30px); }
   50% {
     opacity: .6;
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px); }
+    transform: translateY(2px); }
   80% {
     opacity: .8;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px); }
+    transform: translateY(-3px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+    transform: translateY(0%); } }
 
 @keyframes slideIn-quick {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px); }
+    transform: translateY(-30px); }
   50% {
     opacity: .6;
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px); }
+    transform: translateY(2px); }
   80% {
     opacity: .8;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px); }
+    transform: translateY(-3px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+    transform: translateY(0%); } }
+
+@-moz-keyframes slideIn-quick {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  50% {
+    opacity: .6;
+    transform: translateY(2px); }
+  80% {
+    opacity: .8;
+    transform: translateY(-3px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-o-keyframes slideIn-quick {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  50% {
+    opacity: .6;
+    transform: translateY(2px); }
+  80% {
+    opacity: .8;
+    transform: translateY(-3px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 
 .header__logo {
   background: url("../img/logo.svg") no-repeat top center;
   background-size: 130px;
   padding: 13rem 0 0 0;
-  opacity: 0;
-  -webkit-animation: slideIn .6s .4s forwards;
-  /* Safari 4+ */
-  /* Fx 5+ */
-  /* Opera 12+ */
-  animation: slideIn .6s .4s forwards;
-  /* IE 10+, Fx 29+ */ }
+  opacity: 0; }
+  .header__logo.animate {
+    -webkit-animation: slideIn .6s .4s forwards;
+    /* Safari 4+ */
+    -moz-animation: slideIn .6s .4s forwards;
+    /* Fx 5+ */
+    -o-animation: slideIn .6s .4s forwards;
+    /* Opera 12+ */
+    animation: slideIn .6s .4s forwards;
+    /* IE 10+, Fx 29+ */ }
   @media (min-width: 800px) {
     .header__logo {
       background-size: 150px;
@@ -708,7 +749,6 @@ svg:hover .svg-hover {
   margin: 0 1rem;
   letter-spacing: .05rem;
   line-height: 0rem;
-  -webkit-transition: .2s;
   transition: .2s; }
   @media screen and (max-width: 350px) {
     .nav__link {
@@ -808,7 +848,6 @@ svg:hover .svg-hover {
       opacity: 1; } }
 
 .project__title, .project img, a {
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out; }
 
 .project a:hover {
