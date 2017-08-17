@@ -41,6 +41,7 @@ var
     return gulp.src('scss/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
+      .pipe(cssnano())
       .pipe(gulp.dest('./css'));
   });
 
@@ -52,9 +53,9 @@ var
   // watch for changes
   gulp.task('watch', function() {
     // js
-    gulp.watch(folder.src + 'js/**/*', ['js']);
+    gulp.watch('js/**/*', ['js']);
     // sass
-    gulp.watch(folder.src + 'scss/**/*', ['scss']);
+    gulp.watch('scss/**/*', ['scss']);
   });
 
   // Default Task //

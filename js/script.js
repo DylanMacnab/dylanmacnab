@@ -45,10 +45,3 @@ $.stellar({
 // jQuery FadeIn /
 //***************//
 $('.header-image').animate({ opacity: 1 }, { duration: 300 });
-
-
-// Text Float In //
-// On Window Loaded
-window.onload = () => {
-  $('.header__logo').addClass('.animate');
-}

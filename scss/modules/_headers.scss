@@ -164,15 +164,7 @@
 	background: url('../img/logo.svg') no-repeat top center;
 	background-size: 130px;
 	padding: 13rem 0 0 0;
-	opacity: 0;
-	&.animate {
-	  -webkit-animation: slideIn .6s .4s forwards; /* Safari 4+ */
-	  -moz-animation:    slideIn .6s .4s forwards; /* Fx 5+ */
-	  -o-animation:      slideIn .6s .4s forwards; /* Opera 12+ */
-	  animation:         slideIn .6s .4s forwards; /* IE 10+, Fx 29+ */
-	}
-	// increase logo size for larger views
-
+	padding: 13rem 0 0 0;
 	@include mq(medium) {
 		background-size: 150px;
 		padding: 15rem 0 0 0;
