@@ -2,8 +2,6 @@
 //	Header Modules + vertical padding / spacing
 //	=============================================================================
 
-
-
 // vertical spacing for home page header background
 .header {
 	padding: 7rem 0 8rem;
@@ -32,7 +30,6 @@
   -moz-animation:    slideIn-quick .5s .3s forwards; /* Fx 5+ */
   -o-animation:      slideIn-quick .5s .3s forwards; /* Opera 12+ */
   animation:         slideIn-quick .5s .3s forwards; /* IE 10+, Fx 29+ */
-
 }
 
 
@@ -42,7 +39,7 @@
 .header-image {
 	opacity: 0;
 	background: $cyan;
-	background: url('../img/blue-background-1x.jpg') no-repeat $cyan;
+	background: url('img/blue-background-1x.jpg') no-repeat $cyan;
 	background-size: cover;
 
 	// to switch background images 2x
@@ -64,49 +61,55 @@
 
 @-webkit-keyframes slideIn {
   0%   { opacity: 0;
-  		 transform: translateY(-100px); }
+  		 transform: translateY(-70px); }
   50% { opacity: .6;
-    	 transform: translateY(2px); }
+    	 transform: translateY(1px); }
   80% { opacity: .8;
-    	 transform: translateY(-3px); }
+    	 transform: translateY(-1px); }
   100% { opacity: 1;
     	 transform: translateY(0%); }
 }
 
 @keyframes slideIn {
-  0%   { opacity: 0;
-  		 transform: translateY(-100px); }
+	0%   { opacity: 0;
+  		 transform: translateY(-70px); }
   50% { opacity: .6;
-    	 transform: translateY(2px); }
+    	 transform: translateY(1px); }
   80% { opacity: .8;
-    	 transform: translateY(-3px); }
+    	 transform: translateY(-1px); }
   100% { opacity: 1;
     	 transform: translateY(0%); }
 }
 
 @-moz-keyframes slideIn {
-  0%   { opacity: 0;
-  		 transform: translateY(-100px); }
+	0%   { opacity: 0;
+  		 transform: translateY(-70px); }
   50% { opacity: .6;
-    	 transform: translateY(2px); }
+    	 transform: translateY(1px); }
   80% { opacity: .8;
-    	 transform: translateY(-3px); }
+    	 transform: translateY(-1px); }
   100% { opacity: 1;
     	 transform: translateY(0%); }
 }
 
 @-o-keyframes slideIn {
-  0%   { opacity: 0;
-  		 transform: translateY(-100px); }
+	0%   { opacity: 0;
+  		 transform: translateY(-70px); }
   50% { opacity: .6;
-    	 transform: translateY(2px); }
+    	 transform: translateY(1px); }
   80% { opacity: .8;
-    	 transform: translateY(-3px); }
+    	 transform: translateY(-1px); }
   100% { opacity: 1;
     	 transform: translateY(0%); }
 }
 
 
+// Layered Slide In Animations for Home page
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 ///// Quick Slide In : for project headers ////////
 
@@ -161,12 +164,29 @@
 
 // Logo, Name, Title Area
 .header__logo {
-	background: url('../img/logo.svg') no-repeat top center;
-	background-size: 130px;
-	padding: 13rem 0 0 0;
-	padding: 13rem 0 0 0;
-	@include mq(medium) {
-		background-size: 150px;
-		padding: 15rem 0 0 0;
-	}
+	margin-bottom: 3rem;
+	opacity: 0;
+	max-width: 130px;
+}
+.header--logo-1 {
+	opacity: 0;
+	-webkit-animation: slideIn .5s .3s forwards; /* Safari 4+ */
+	-moz-animation:    slideIn .5s .3s forwards; /* Fx 5+ */
+	-o-animation:      slideIn .5s .3s forwards; /* Opera 12+ */
+	animation:         slideIn .5s .3s forwards; /* IE 10+, Fx 29+ */
+}
+.header--logo-2 {
+	opacity: 0;
+	-webkit-animation: slideIn .5s .6s forwards; /* Safari 4+ */
+	-moz-animation:    slideIn .5s .6s forwards; /* Fx 5+ */
+	-o-animation:      slideIn .5s .6s forwards; /* Opera 12+ */
+	animation:         slideIn .5s .6s forwards; /* IE 10+, Fx 29+ */
+	margin-top: 30px;
+}
+.header--logo-3 {
+	opacity: 0;
+	-webkit-animation: fadeIn .5s .9s forwards; /* Safari 4+ */
+	-moz-animation:    fadeIn .5s .9s forwards; /* Fx 5+ */
+	-o-animation:      fadeIn .5s .9s forwards; /* Opera 12+ */
+	animation:         fadeIn .5s .9s forwards; /* IE 10+, Fx 29+ */
 }

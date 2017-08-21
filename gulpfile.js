@@ -30,7 +30,7 @@ var
           gulp.src('js/**/*'),
           babel(),
           uglify(),
-          gulp.dest('./js/min')
+          gulp.dest('./dist/js')
       ],
       cb
     );
@@ -42,20 +42,20 @@ var
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(cssnano())
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('./dist/css'));
   });
 
   // Automated Tasks //
   // *****************
 
   // run all tasks
-  gulp.task('run', ['scss', 'js']);
+  gulp.task('run', ['scss']);
   // watch for changes
   gulp.task('watch', function() {
     // js
     gulp.watch('js/**/*', ['js']);
     // sass
-    gulp.watch('scss/**/*', ['scss']);
+    gulp.watch('scss/**/*', ['scss', 'js']);
   });
 
   // Default Task //

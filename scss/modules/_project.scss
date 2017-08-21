@@ -4,41 +4,69 @@
 
 
 .project {
-	
-	// width 100% of parten on small screens
-	padding: 5.5rem 0 0 0;
 	position: relative;
+	margin-bottom: 3rem;
+
+	img {
+		display: block;
+	}
+
+	&:first-of-type {
+		margin-top: 4rem;
+		@include mq(medium) {
+			margin-top: 2rem;
+		}
+	}
 
 	a {
 		border-bottom: none;
-	}
-
-	&:last-of-type {
-		padding-bottom: 2rem;
+		display: block;
+		position: relative;
+		@include mq(medium) {
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 10;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(255,255,255,0);
+				transition: .3s;
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
 	}
 
 	@include mq(medium) {
-		width: 45%; 
-		margin: 0 2.5%;
+		width: 45%;
+		margin: 2rem 2.5%;
 		float: left;
-		padding-top: 7rem;
 	}
 	@include mq(large) {
 		width: 29%;
-		margin: 0 2.166666%;
-		padding-top: 4rem;
+		margin: 2rem 2.166666%;
 	}
 }
 
+.project a:hover:after {
+	background-color: rgba(255,255,255,.7);
+	visibility: visible;
+	opacity: 1;
+}
 
 
 .project__title {
 	position: absolute;
-	top: 40%;
+	top: 35%;
 	right: 0;
 	left: 0;
 	opacity: 0;
 	margin-bottom: 0;
+	z-index: 20;
 	@media screen and (max-width: 1200px) {
 		position: static;
 		opacity: 1;
@@ -55,17 +83,10 @@
 
 
 .project a:hover {
-
-    -webkit-backface-visibility: hidden;
-
-
-	img {
-		opacity: .45;
-	}
-
+  -webkit-backface-visibility: hidden;
 	.project__title {
 		opacity: 1;
-		top: 50%;
+		top: 40%;
 		&last-of-type {
 			top: 40%;
 		}
