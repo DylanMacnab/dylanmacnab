@@ -7,13 +7,24 @@ $(".nav-placeholder").height($("nav").outerHeight());
 
 $(window).scroll(function() {
 	var scrollPos = $(window).scrollTop();
-
 	if (scrollPos >= navOffset) {
 		$("nav").addClass("fixed-nav");
 	} else {
 		$("nav").removeClass("fixed-nav");
 	}
-	
+});
+
+
+// NEW JS
+var nav = document.querySelector('.nav');
+var navOffset = nav.offsetTop;
+document.addEventListener('scroll', () => {
+	var scrollPos = widow.scrollY;
+	if (scrollPos >= navOffset) {
+		nav.classList.add('fixed-nav');
+	} else {
+		nav.classList.remove('fixed-nav');
+	}
 });
 
 
